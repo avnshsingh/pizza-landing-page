@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import Header from "@/components/custom/header";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -24,7 +25,8 @@ export default function RootLayout({
           manrope.variable
         )}
       >
-        {children}
+        <Header />
+        <main> {children}</main>
       </body>
     </html>
   );
